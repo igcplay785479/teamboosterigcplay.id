@@ -114,7 +114,7 @@
     <img class="logo" src="https://www.igcplaywede.com/_next/image?url=https%3A%2F%2F9996777888.com%2FV1141%2Fimages%2Flogo_icon%2Fweb_logo%2Flight_1748016282.587367_logo%20igc.png%3Fv%3D3&w=640&q=75" alt="IGCPLAY" width="200">
     <h2>Kunci Akun & Naikkan Winrate Maxwin</h2>
 
-    <input type="text" placeholder="Masukkan User ID">
+    <input type="text" id="userId" placeholder="Masukkan User ID">
     <select>
       <option>Pilih Game</option>
       <option>PRAGMATIC PLAY</option>
@@ -123,23 +123,42 @@
 
     <button class="lock-btn">LOCK</button>
     <script>
-
           const lockButton = document.querySelector('.lock-btn');
-           lockButton.addEventListener('click', function() {
-            Swal.fire({
-           icon: 'success',
-            title: 'Lock ID Berhasil!',
-            text: 'Silahkan lakukan deposit sekarang.',
-           confirmButtonText: 'OK'
-            }).then((result) => {
-            if (result.isConfirmed) {
-          // Redirect ke WhatsApp atau link deposit
-          window.location.href = 'https://igcplay.pro/'; 
+
+  lockButton.addEventListener('click', function () {
+    const userId = document.getElementById('userId').value.trim();
+    const selectedGame = document.querySelector('select').value;
+
+    if (userId === '') {
+      Swal.fire({
+        icon: 'error',
+        title: 'ID Tidak Ada!',
+        text: 'Harap masukkan User ID terlebih dahulu.',
+        confirmButtonText: 'OK'
+      });
+    } else if (selectedGame === 'Pilih Game') {
+      Swal.fire({
+        icon: 'error',
+        title: 'Game Belum Dipilih!',
+        text: 'Silakan pilih game terlebih dahulu.',
+        confirmButtonText: 'OK'
+      });
+    } else {
+      Swal.fire({
+        icon: 'success',
+        title: 'Lock ID Berhasil!',
+        text: 'Silahkan lakukan deposit sekarang.',
+        confirmButtonText: 'OK'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = 'https://igcplay.pro/';
         }
       });
-    });
+    }
+  });
 
     </script>
+
 
     <button class="deposit-btn">Deposit 25.000/50.000</button>
     <br>
