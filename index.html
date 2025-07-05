@@ -121,12 +121,12 @@
 
     <input type="text" id="userId" placeholder="Masukkan User ID" />
     <select id="gameSelect">
-      <option>Pilih Game</option>
+      <option>Pilih Game Provider</option>
       <option>PRAGMATIC PLAY</option>
       <option>PG SOFT</option>
     </select>
 
-    <button class="lock-btn">BOOSTER ID</button>
+    <button class="lock-btn">Booster</button>
     <button class="deposit-btn">Deposit 25.000/50.000</button>
     <br />
     <!-- WHATSAPP LINK -->
@@ -148,11 +148,11 @@
             text: 'Harap masukkan User ID terlebih dahulu.',
             confirmButtonText: 'OK',
           });
-        } else if (selectedGame === 'Pilih Game') {
+        } else if (selectedGame === 'Pilih Game Provider') {
           Swal.fire({
             icon: 'error',
             title: 'Game Belum Dipilih!',
-            text: 'Silakan pilih game terlebih dahulu.',
+            text: 'Silakan pilih game provider terlebih dahulu.',
             confirmButtonText: 'OK',
           });
         } else {
@@ -174,11 +174,11 @@
         const userId = document.getElementById('userId').value.trim();
         const selectedGame = document.getElementById('gameSelect').value;
 
-        if (userId === '' || selectedGame === 'Pilih Game') {
-          alert('Silakan isi User ID dan pilih game terlebih dahulu!');
+        if (userId === '' || selectedGame === 'Pilih Game Provider') {
+          alert('Silakan isi User ID dan pilih Game Provider terlebih dahulu!');
           e.preventDefault();
         } else {
-          const message = `Halo Admin, saya ingin BOOSTER ID dengan detail:\n\nUser ID: ${userId}\nGame: ${selectedGame}`;
+          const message = `Halo Admin Jocelyn, saya ingin BOOSTER ID dengan detail:\n\nUser ID: ${userId}\nGame Provider: ${selectedGame}`;
           const phoneNumber = '62882000196229';
           const encodedMessage = encodeURIComponent(message);
           const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
