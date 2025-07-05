@@ -74,6 +74,7 @@
       border-radius: 8px;
       transition: transform 0.2s;
     }
+
     .lock-btn:hover {
       transform: scale(1.05);
     }
@@ -126,6 +127,14 @@
     </select>
 
     <button class="lock-btn">BOOSTER ID</button>
+    <button class="deposit-btn">Deposit 25.000/50.000</button>
+    <br />
+    <!-- WHATSAPP LINK -->
+    <a class="whatsapp-link" href="https://wa.me/62882000196229" target="_blank">
+      Hubungi via WhatsApp
+    </a>
+
+    <!-- SCRIPT HARUS DI BAWAH -->
     <script>
       const lockButton = document.querySelector('.lock-btn');
       lockButton.addEventListener('click', function () {
@@ -160,7 +169,6 @@
         }
       });
 
-      // Script WhatsApp
       const whatsappLink = document.querySelector('.whatsapp-link');
       whatsappLink.addEventListener('click', function (e) {
         const userId = document.getElementById('userId').value.trim();
@@ -178,12 +186,6 @@
         }
       });
     </script>
-
-    <button class="deposit-btn">Deposit 25.000/50.000</button>
-    <br />
-    <a class="whatsapp-link" href="https://wa.me/62882000196229" target="_blank"
-      >Hubungi via WhatsApp</a
-    >
   </div>
 </body>
 </html>
