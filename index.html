@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>BOOSTER ID IGCPLAY</title>
+  <title>LOCKWIN | BOOSTER ID</title>
   <link rel="icon" href="mahkota.png" type="image/png" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
@@ -25,14 +24,21 @@
     .form-container {
       background: rgba(0, 0, 0, 0.8);
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 15px;
       text-align: center;
       width: 350px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
 
     .form-container h1 {
       color: red;
-      margin: 0 0 10px;
+      margin: 0;
+    }
+
+    .form-container p {
+      color: #ddd;
+      font-size: 14px;
+      margin: 5px 0 20px;
     }
 
     .form-container h2 {
@@ -47,10 +53,9 @@
       padding: 12px;
       margin: 10px 0;
       border-radius: 5px;
-      border: 1px solid transparent;
+      border: none;
       font-size: 16px;
       box-sizing: border-box;
-      display: block;
       outline: none;
     }
 
@@ -60,19 +65,16 @@
       margin: 10px 0;
       border: none;
       border-radius: 5px;
-      color: white;
       font-size: 16px;
       cursor: pointer;
+      transition: transform 0.2s;
     }
 
     .lock-btn {
       background: #00FF00;
-      color: black;
-      padding: 15px 40px;
-      font-size: 20px;
+      color: #000;
       font-weight: bold;
-      border-radius: 8px;
-      transition: transform 0.2s;
+      font-size: 18px;
     }
 
     .lock-btn:hover {
@@ -88,11 +90,11 @@
       margin-top: 10px;
       background: #25D366;
       color: white;
-      padding: 8px 16px;
+      padding: 10px 20px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      animation: shake 1s infinite;
+      animation: shake 1s infinite; /* ✅ animasi goyang aktif */
     }
 
     @keyframes shake {
@@ -107,7 +109,6 @@
       margin: 10px 0;
     }
 
-    /* Custom SweetAlert2 style */
     .swal2-popup {
       width: 300px !important;
     }
@@ -124,21 +125,22 @@
 <body>
 
   <div class="form-container">
-    <h1>LOCKWIN</h1>
-    <img class="logo" src="https://www.igcplaywede.com/_next/image?url=https%3A%2F%2F9996777888.com%2FV1141%2Fimages%2Flogo_icon%2Fweb_logo%2Flight_1748016282.587367_logo%20igc.png%3Fv%3D3&w=640&q=75" alt="IGCPLAY" width="200">
+    <h1>LOCKWIN 🔒✨</h1>
+    <p>Tingkatkan Winrate & Kunci Akun Anda Sekarang!</p>
+    <img class="logo" src="https://www.igcplaywede.com/_next/image?url=https%3A%2F%2F9996777888.com%2FV1141%2Fimages%2Flogo_icon%2Fweb_logo%2Flight_1748016282.587367_logo%20igc.png%3Fv%3D3&w=640&q=75" alt="IGCPLAY" width="260">
     <h2>Booster Akun & Naikkan Winrate</h2>
 
-    <input type="text" id="userId" placeholder="Masukkan User ID">
+    <input type="text" id="userId" placeholder="👤 Masukkan User ID">
     <select id="gameSelect">
       <option>Pilih Game Provider</option>
-      <option>⚡PRAGMATIC PLAY</option>
-      <option>🀄PG SOFT</option>
+      <option>⚡ PRAGMATIC PLAY</option>
+      <option>🀄 PG SOFT</option>
     </select>
 
-    <button class="lock-btn">👉BOOSTER ID👈</button>
-    <button class="deposit-btn">Deposit 25.000/50.000</button>
+    <button class="lock-btn">🚀 BOOSTER ID SEKARANG</button>
+    <button class="deposit-btn">🔒 Deposit Mulai 25.000</button>
     <br>
-    <a class="whatsapp-link" href="https://wa.me/62882000196229" target="_blank">Hubungi via WhatsApp</a>
+    <a class="whatsapp-link" href="#">📲 Chat Admin Sekarang</a>
   </div>
 
   <script>
@@ -154,20 +156,14 @@
           icon: 'error',
           title: 'Data Belum Lengkap!',
           text: 'Harap isi User ID dan pilih Game Provider terlebih dahulu.',
-          confirmButtonText: 'OK',
-          customClass: {
-            popup: 'swal2-popup'
-          }
+          confirmButtonText: 'OK'
         });
       } else {
         Swal.fire({
           icon: 'success',
-          title: 'Boost ID Berhasil!',
+          title: 'Berhasil!',
           text: 'Silahkan lakukan deposit sekarang.',
-          confirmButtonText: 'OK',
-          customClass: {
-            popup: 'swal2-popup'
-          }
+          confirmButtonText: 'OK'
         }).then((result) => {
           if (result.isConfirmed) {
             window.location.href = 'https://igcplay.pro/';
@@ -186,10 +182,7 @@
           icon: 'error',
           title: 'Data Belum Lengkap!',
           text: 'Harap isi User ID dan pilih Game Provider terlebih dahulu.',
-          confirmButtonText: 'OK',
-          customClass: {
-            popup: 'swal2-popup'
-          }
+          confirmButtonText: 'OK'
         });
       } else {
         const message = `Halo Admin Jocelyn, saya ingin BOOSTER ID dengan detail:\n\nUser ID: ${userId}\nGame Provider: ${selectedGame}`;
